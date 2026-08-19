@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ArenaCash — Indique um amigo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef4ff;
+      color: #ffffff;
+    }
+
+    .apresentacao {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .slide {
+      width: min(1200px, 100%);
+      aspect-ratio: 16 / 9;
+
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+
+      padding: 80px;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255, 255, 255, 0.18),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #0757d9 0%,
+          #003da8 55%,
+          #002b78 100%
+        );
+
+      border-radius: 24px;
+
+      box-shadow:
+        0 30px 80px rgba(0, 45, 120, 0.22);
+    }
+
+    .conteudo {
+      position: relative;
+      z-index: 2;
+
+      max-width: 700px;
+    }
+
+    .marca {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 48px;
+
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .logo {
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: #ffffff;
+      color: #0757d9;
+
+      font-weight: 800;
+    }
+
+    .etiqueta {
+      display: inline-block;
+
+      margin-bottom: 18px;
+      padding: 8px 14px;
+
+      background: rgba(255, 255, 255, 0.14);
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    h1 {
+      max-width: 760px;
+
+      margin-bottom: 24px;
+
+      font-size: clamp(48px, 6vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+    }
+
+    .destaque {
+      color: #8fc1ff;
+    }
+
+    .subtitulo {
+      max-width: 620px;
+
+      margin-bottom: 40px;
+
+      font-size: 22px;
+      line-height: 1.5;
+
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .botao {
+      display: inline-block;
+
+      padding: 16px 28px;
+
+      background: #ffffff;
+      color: #0757d9;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      font-size: 17px;
+      font-weight: 700;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .decoracao {
+      position: absolute;
+
+      right: -90px;
+      bottom: -130px;
+
+      width: 510px;
+      height: 510px;
+
+      border: 75px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .cartao {
+      position: absolute;
+
+      right: 90px;
+      top: 100px;
+
+      width: 280px;
+      padding: 26px;
+
+      background: rgba(255, 255, 255, 0.12);
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+
+      backdrop-filter: blur(8px);
+
+      transform: rotate(5deg);
+
+      z-index: 1;
+    }
+
+    .cartao-label {
+      margin-bottom: 12px;
+
+      font-size: 14px;
+
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .cartao-valor {
+      margin-bottom: 28px;
+
+      font-size: 42px;
+      font-weight: 800;
+    }
+
+    .cartao-linha {
+      height: 8px;
+
+      margin-bottom: 10px;
+
+      background: rgba(255, 255, 255, 0.18);
+
+      border-radius: 999px;
+    }
+
+    .cartao-linha.curta {
+      width: 65%;
+    }
+
+    @media (max-width: 800px) {
+      .apresentacao {
+        padding: 0;
+      }
+
+      .slide {
+        min-height: 100vh;
+        aspect-ratio: auto;
+
+        padding: 48px 32px;
+
+        border-radius: 0;
+      }
+
+      .conteudo {
+        max-width: 100%;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .cartao {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="apresentacao">
+
+    <section class="slide">
+
+      <div class="conteudo">
+
+        <div class="marca">
+          <div class="logo">A</div>
+          ArenaCash
+        </div>
+
+        <div class="etiqueta">
+          Programa de indicação
+        </div>
+
+        <h1>
+          Indique um amigo e ganhe
+          <span class="destaque">R$ 50</span>
+        </h1>
+
+        <p class="subtitulo">
+          Compartilhe a ArenaCash com seus amigos.
+          Quando eles começarem a investir, você recebe
+          R$ 50 para continuar construindo seu patrimônio.
+        </p>
+
+        <a href="#" class="botao">
+          Saiba mais
+        </a>
+
+      </div>
+
+      <div class="cartao">
+        <div class="cartao-label">
+          Bônus por indicação
+        </div>
+
+        <div class="cartao-valor">
+          + R$ 50
+        </div>
+
+        <div class="cartao-linha"></div>
+        <div class="cartao-linha curta"></div>
+      </div>
+
+      <div class="decoracao"></div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
